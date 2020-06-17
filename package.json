@@ -1,0 +1,16 @@
+{
+  "name": "netlify-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jkyle/netlify-demo.git",
+  "author": "jkyle <jkyle@causethought.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.23.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
+  }
+}
