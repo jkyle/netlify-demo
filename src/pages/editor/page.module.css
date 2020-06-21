@@ -1,0 +1,47 @@
+.page {
+  position: relative;
+  width: 4.5in;
+  height: 7.125in;
+  margin: 0.5in;
+  background-color: #fff;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.46);
+}
+
+.trim {
+  position: absolute;
+  top: 0.125in;
+  left: 0.125in;
+  width: 4.25in;
+  height: 6.875in;
+  border: 1px solid #ccc;
+}
+
+.safeArea {
+  position: absolute;
+  top: 0.5in;
+  left: 0.5in;
+  width: 3.25in;
+  height: 5.875in;
+}
+
+.cell {
+  /* height: calc(5.875in / 20 - 1px); */
+  position: absolute;
+  border: 0.5px solid #eef;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.cell:hover {
+  background: #fdf;
+}
+
+.value {
+  z-index: 1;
+  background: #fff;
+}
+.selected {
+  background: #adf;
+}

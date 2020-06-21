@@ -6,9 +6,12 @@
   "author": "jkyle <jkyle@causethought.com>",
   "license": "MIT",
   "dependencies": {
+    "clsx": "^1.1.1",
     "gatsby": "^2.23.3",
+    "lodash": "^4.17.15",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "typeface-cooper-hewitt": "0.0.44"
   },
   "devDependencies": {
     "prettier": "2.0.5"
