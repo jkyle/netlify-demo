@@ -2,17 +2,25 @@ import React from 'react';
 import styles from './edit-pane.module.css';
 
 const EditPane = ({
-  selectedCell,
+  selectedItem,
   handleChangeValue,
   handleChangeColSpan,
   handleChangeTextAlign,
+  handleClose,
+  handleDelete,
 }) => {
   return (
     <section className={styles.wrapper}>
+      <button type="button" onClick={handleClose}>
+        Close
+      </button>
+      <button type="button" onClick={handleDelete}>
+        Delete
+      </button>
       <label htmlFor="value">Value</label>
       <input
         id="value"
-        value={selectedCell.value}
+        value={selectedItem.value}
         onChange={(e) => handleChangeValue(e.target.value)}
       />
 
@@ -22,13 +30,13 @@ const EditPane = ({
         type="number"
         min="1"
         max="4"
-        value={selectedCell.colSpan}
+        value={selectedItem.colSpan}
         onChange={(e) => handleChangeColSpan(e.target.value)}
       />
 
       <label htmlFor="textAlign">TextAlign</label>
       <select
-        value={selectedCell.textAlign}
+        value={selectedItem.textAlign}
         onChange={(e) => handleChangeTextAlign(e.target.value)}
       >
         <option>LEFT</option>

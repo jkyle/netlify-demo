@@ -1,8 +1,14 @@
 import React from 'react';
-import clsx from 'clsx';
 import styles from './page.module.css';
+import Item from './item';
 
-const Page = ({ grid, selectedCell, setSelectedCell }) => {
+const Page = ({
+  grid,
+  items,
+  handleCreateItem,
+  selectedItemId,
+  setSelectedItemId,
+}) => {
   return (
     <div className={styles.page}>
       <div className={styles.trim}>
@@ -10,11 +16,7 @@ const Page = ({ grid, selectedCell, setSelectedCell }) => {
           {Object.values(grid).map((cell) => (
             <div
               key={cell.id}
-              className={clsx({
-                [styles.cell]: true,
-                [styles.value]: cell.value.length > 0,
-                [styles.selected]: selectedCell === cell.id,
-              })}
+              className={styles.cell}
               style={{
                 left: `${cell.x}in`,
                 top: `${cell.y}in`,
@@ -30,12 +32,21 @@ const Page = ({ grid, selectedCell, setSelectedCell }) => {
               }}
               role="button"
               tabIndex={0}
-              onKeyPress={() => setSelectedCell(cell.id)}
-              onClick={() => setSelectedCell(cell.id)}
-            >
-              {cell.value}
-            </div>
+              onKeyPress={() => handleCreateItem(cell)}
+              onClick={() => handleCreateItem(cell)}
+            />
           ))}
+
+          {Object.values(items).map((item) => {
+            return (
+              <Item
+                key={item.id}
+                item={item}
+                setSelectedItemId={setSelectedItemId}
+                selectedItemId={selectedItemId}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

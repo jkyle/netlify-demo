@@ -1,0 +1,17 @@
+.item {
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.item:hover {
+  background-color: #eee;
+}
+
+.selected {
+  background: #dedeff;
+}

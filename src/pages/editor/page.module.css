@@ -25,23 +25,10 @@
 }
 
 .cell {
-  /* height: calc(5.875in / 20 - 1px); */
   position: absolute;
   border: 0.5px solid #eef;
-  overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  white-space: nowrap;
 }
 
 .cell:hover {
   background: #fdf;
-}
-
-.value {
-  z-index: 1;
-  background: #fff;
-}
-.selected {
-  background: #adf;
 }
